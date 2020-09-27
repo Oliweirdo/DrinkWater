@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkWater.Android", "DrinkWater.Android\DrinkWater.Android.csproj", "{17135468-BF11-42B5-ABBC-7B50FAF4AD76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkWater", "DrinkWater\DrinkWater.csproj", "{3AC11543-D3F7-40B4-8590-23373B699407}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17135468-BF11-42B5-ABBC-7B50FAF4AD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17135468-BF11-42B5-ABBC-7B50FAF4AD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17135468-BF11-42B5-ABBC-7B50FAF4AD76}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{17135468-BF11-42B5-ABBC-7B50FAF4AD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17135468-BF11-42B5-ABBC-7B50FAF4AD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17135468-BF11-42B5-ABBC-7B50FAF4AD76}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3AC11543-D3F7-40B4-8590-23373B699407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC11543-D3F7-40B4-8590-23373B699407}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC11543-D3F7-40B4-8590-23373B699407}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3AC11543-D3F7-40B4-8590-23373B699407}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC11543-D3F7-40B4-8590-23373B699407}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC11543-D3F7-40B4-8590-23373B699407}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDED3FFD-3BFF-4CF4-9461-216373115D46}
+	EndGlobalSection
+EndGlobal
