@@ -5,14 +5,13 @@ using Xamarin.Forms;
 
 namespace DrinkWater.ViewModels
 {
-    public class AboutViewModel : BaseViewModel
+    public class AboutViewModel 
     {
         public AboutViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
+          
         }
 
-        public ICommand OpenWebCommand { get; }
+     
     }
 }

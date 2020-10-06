@@ -11,7 +11,9 @@ namespace DrinkWater
         public AppShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute(nameof(SetPage), typeof(SetPage));
             Routing.RegisterRoute(nameof(AboutPage), typeof(AboutPage));
+            Routing.RegisterRoute(nameof(MainPage), typeof(MainPage));
 
         }
 
