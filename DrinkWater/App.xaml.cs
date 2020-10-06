@@ -1,8 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using DrinkWater.Services;
-using DrinkWater.Views;
+
 
 namespace DrinkWater
 {
@@ -12,8 +10,6 @@ namespace DrinkWater
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

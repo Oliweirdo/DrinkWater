@@ -3,19 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DrinkWater.ViewModels;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace DrinkWater.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class MainPage : ContentPage
     {
-        public LoginPage()
+        public MainPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await this.Navigation.PushAsync(new SetPage()).ConfigureAwait(false);
         }
     }
 }

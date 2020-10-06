@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="DrinkWater.Views.SetPage"
+             Visual="Material"
+             BackgroundColor="#98c1d9">
+
+
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Settings"
+                   FontSize="40" TextColor="Black" FontFamily="CabinSketch"
+                   Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <yummy:PancakeView BackgroundColor="WhiteSmoke" Padding=" 10" CornerRadius="60,60,0,0"
+                               HorizontalOptions="FillAndExpand" Grid.Row="1">
+                    <Grid Padding="20">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Start" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
+                        <TimePicker  Grid.Row="1" HorizontalOptions="Center" ></TimePicker>
+                        <Label Grid.Row="2" Text="End" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
+                        <TimePicker  Grid.Row="3"  HorizontalOptions="Center" ></TimePicker>
+                        <Expander Grid.Row="4"  HorizontalOptions="Center">
+                            <Expander.Header>
+                                <Label TextColor="Black" Text="set time interval ▼ " FontFamily="Mulish" FontSize="Medium"  />
+                            </Expander.Header>
+                            <StackLayout  HorizontalOptions="Center" >
+                                <Label TextColor="Black" Text=""/>
+                                <RadioButton Text=" 0,5 h" IsChecked="true" />
+                                <RadioButton Text=" 1 h"  />
+                                <RadioButton Text=" 1,5 h" />
+                                <RadioButton Text=" 2 h" />
+                                <RadioButton Text=" 2,5 h" />
+                                <RadioButton Text=" 3 h"/>
+                                <RadioButton Text=" 3,5h " />
+                                <RadioButton Text=" 4 h " />
+                            </StackLayout>
+                        </Expander>
+                        <Expander Grid.Row="5" HorizontalOptions="Center">
+                            <Expander.Header>
+                                <Label Text="Message: " TextColor="Black" FontFamily="Mulish" FontSize="Medium"  />
+                            </Expander.Header>
+                            <Label Text="It`s time to drink water!🙂 " />
+                        </Expander>
+                        <Expander Grid.Row="6"  HorizontalOptions="Center">
+                            <Expander.Header>
+                                <Label Text=" Sound:" TextColor="Black" FontFamily="Mulish" FontSize="Medium"  />
+                            </Expander.Header>
+                            <Label Text="Default"  />
+                        </Expander>
+                        <Label Grid.Row="7"  HorizontalOptions="Center" TextColor="Black" Text="Vibration:" FontFamily="Mulish" FontSize="Medium" />
+                        <Switch Grid.Row="8"   HorizontalOptions="Center" />
+                        <Button Grid.Row="9" Text="Accept" TextColor="Black" FontFamily="CabinSketch" HorizontalOptions="Center"/>
+                    </Grid>
+                </yummy:PancakeView>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
