@@ -7,6 +7,7 @@
 
 
     <ContentPage.Content>
+        <StackLayout>
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <Grid>
                 <Grid.RowDefinitions >
@@ -66,11 +67,12 @@
                             <Label Text="Default"  />
                         </Expander>
                         <Label Grid.Row="7"  HorizontalOptions="Center" TextColor="Black" Text="Vibration:" FontFamily="Mulish" FontSize="Medium" />
-                        <Switch Grid.Row="8"   HorizontalOptions="Center" />
+                        <Switch Grid.Row="8"  x:Name="_switch" HorizontalOptions="Center" />
                         <Button Grid.Row="9" Text="Accept" TextColor="Black" FontFamily="CabinSketch" HorizontalOptions="Center"/>
                     </Grid>
                 </yummy:PancakeView>
             </Grid>
         </ScrollView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
