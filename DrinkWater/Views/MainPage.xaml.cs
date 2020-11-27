@@ -21,5 +21,6 @@ namespace DrinkWater.Views
         {
             await this.Navigation.PushAsync(new SetPage()).ConfigureAwait(false);
         }
+
     }
 }
