@@ -15,19 +15,17 @@ namespace DrinkWater.Views
 {
     public partial class SettingsPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+
 
         public SettingsPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            _viewModel.OnAppearing();
         }
     }
 }

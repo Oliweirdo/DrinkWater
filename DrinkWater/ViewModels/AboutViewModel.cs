@@ -9,8 +9,9 @@ namespace DrinkWater.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
-            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
+            //Title = "About";
+            //TODO Add proper Address for privacy policy
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync(""));
         }
 
         public ICommand OpenWebCommand { get; }
