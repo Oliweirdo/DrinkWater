@@ -36,21 +36,29 @@
                         <Label Grid.Row="0" Text="Start" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
                         <TimePicker  Grid.Row="1" x:Name="_timePicker" HorizontalOptions="Center" ></TimePicker>
                         <Label Grid.Row="2" Text="End" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
-                        <TimePicker  Grid.Row="3"  HorizontalOptions="Center" ></TimePicker>
+                        <TimePicker  Grid.Row="3" x:Name="_timePickerEnd" HorizontalOptions="Center" ></TimePicker>
                         <Expander Grid.Row="4"  HorizontalOptions="Center">
                             <Expander.Header>
                                 <Label TextColor="Black" Text="set time interval ▼ " FontFamily="Mulish" FontSize="Medium"  />
                             </Expander.Header>
                             <StackLayout  HorizontalOptions="Center" >
                                 <Label TextColor="Black" Text=""/>
-                                <RadioButton Text=" 0,5 h" IsChecked="true" />
-                                <RadioButton Text=" 1 h"  />
-                                <RadioButton Text=" 1,5 h" />
-                                <RadioButton Text=" 2 h" />
-                                <RadioButton Text=" 2,5 h" />
-                                <RadioButton Text=" 3 h"/>
-                                <RadioButton Text=" 3,5h " />
-                                <RadioButton Text=" 4 h " />
+                                <RadioButton x:Name="half" 
+                                             Text=" 0,5 h" IsChecked="true" CheckedChanged="half_CheckedChanged"/>
+                                <RadioButton x:Name="one" 
+                                             Text=" 1 h" CheckedChanged="one_CheckedChanged"/>
+                                <RadioButton x:Name="onehalf" 
+                                             Text=" 1,5 h" CheckedChanged="onehalf_CheckedChanged"/>
+                                <RadioButton x:Name="two" 
+                                             Text=" 2 h" CheckedChanged="two_CheckedChanged"/>
+                                <RadioButton x:Name="twohalf" 
+                                             Text=" 2,5 h" CheckedChanged="twohalf_CheckedChanged" />
+                                <RadioButton x:Name="three" 
+                                             Text=" 3 h" CheckedChanged="three_CheckedChanged" />
+                                <RadioButton x:Name="threehalf"  
+                                             Text=" 3,5h " CheckedChanged="threehalf_CheckedChanged" />
+                                <RadioButton x:Name="four" 
+                                             Text=" 4 h "  CheckedChanged="four_CheckedChanged"/>
                             </StackLayout>
                         </Expander>
                         <Expander Grid.Row="5" HorizontalOptions="Center">
