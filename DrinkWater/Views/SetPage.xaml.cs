@@ -16,6 +16,7 @@ namespace DrinkWater.Views
     {
         readonly INotificationManager notificationManager;
         DateTime _triggerTime;
+        DateTime _triggerTimeEnd;
         public SetPage()
         {
             InitializeComponent();
@@ -31,7 +32,6 @@ namespace DrinkWater.Views
         }
          bool OnTimerTick()
         {
-
             if (_switch.IsToggled && DateTime.Now >= _triggerTime)
                 {
                 _switch.IsToggled = false;
@@ -42,6 +42,11 @@ namespace DrinkWater.Views
 
                 var duration = TimeSpan.FromSeconds(1);
                 Vibration.Vibrate(duration);
+                    if(_switch.IsToggled && DateTime.Now >= _triggerTimeEnd) 
+                return false;
+            
+                if (_triggerTimeEnd > _triggerTime)
+                    return false;
             }
             return true;
         }
@@ -51,11 +56,13 @@ namespace DrinkWater.Views
             if (args.PropertyName == "Time")
             {
                 SetTriggerTime();
+                SetTriggerTimeEnd();
             }
         }
         void OnSwitchToggled(object sender, ToggledEventArgs args)
         {
             SetTriggerTime();
+            SetTriggerTimeEnd();
         }
         void SetTriggerTime()
         {
@@ -68,8 +75,15 @@ namespace DrinkWater.Views
                 }
             }
         }
+        void SetTriggerTimeEnd()
+        {
+            if (_switch.IsToggled)
+            {
+                _triggerTimeEnd = DateTime.Today + _timePickerEnd.Time;
+            }
+        }
 
-            void ShowNotification(string title, string message)
+        void ShowNotification(string title, string message)
         {
             Device.BeginInvokeOnMainThread(() =>
             {
