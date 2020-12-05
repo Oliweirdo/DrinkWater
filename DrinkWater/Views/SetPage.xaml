@@ -4,8 +4,6 @@
              x:Class="DrinkWater.Views.SetPage"
              Visual="Material"
              BackgroundColor="#98c1d9">
-
-
     <ContentPage.Content>
         <ScrollView Orientation="Vertical" VerticalOptions="FillAndExpand">
             <Grid>
@@ -20,24 +18,20 @@
                                HorizontalOptions="FillAndExpand" Grid.Row="1">
                     <Grid Padding="20">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="60"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="60"/>
                             <RowDefinition Height="60"/>
                             <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
-                            <RowDefinition Height="60"/>
                         </Grid.RowDefinitions>
                         <Label Grid.Row="0" Text="Start" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
-                        <TimePicker  Grid.Row="1" x:Name="_timePicker" HorizontalOptions="Center" ></TimePicker>
-                        <Label Grid.Row="2" Text="End" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
-                        <TimePicker  Grid.Row="3" x:Name="_timePickerEnd" HorizontalOptions="Center" ></TimePicker>
-                        <Expander Grid.Row="4"  HorizontalOptions="Center">
+                        <TimePicker  Grid.Row="0" x:Name="_timePicker" HorizontalOptions="Center" ></TimePicker>
+                        <Label Grid.Row="1" Text="End" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
+                        <TimePicker  Grid.Row="1" x:Name="_timePickerEnd" HorizontalOptions="Center" ></TimePicker>
+                        <Expander Grid.Row="2"  HorizontalOptions="Center">
                             <Expander.Header>
                                 <Label TextColor="Black" Text="set time interval ▼ " FontFamily="Mulish" FontSize="Medium"  />
                             </Expander.Header>
@@ -61,21 +55,9 @@
                                              Text=" 4 h "  CheckedChanged="four_CheckedChanged"/>
                             </StackLayout>
                         </Expander>
-                        <Expander Grid.Row="5" HorizontalOptions="Center">
-                            <Expander.Header>
-                                <Label Text="Message: " TextColor="Black" FontFamily="Mulish" FontSize="Medium"  />
-                            </Expander.Header>
-                            <Label Text="It`s time to drink water!🙂 " />
-                        </Expander>
-                        <Expander Grid.Row="6"  HorizontalOptions="Center">
-                            <Expander.Header>
-                                <Label Text=" Sound:" TextColor="Black" FontFamily="Mulish" FontSize="Medium"  />
-                            </Expander.Header>
-                            <Label Text="Default"  />
-                        </Expander>
-                        <Label Grid.Row="7"  HorizontalOptions="Center" TextColor="Black" Text="Vibration:" FontFamily="Mulish" FontSize="Medium" />
-                        <Switch Grid.Row="8" x:Name="_switch" Toggled="OnSwitchToggled"   HorizontalOptions="Center" />
-                        <Button Grid.Row="9" Text="Accept" TextColor="Black" FontFamily="CabinSketch" HorizontalOptions="Center"/>
+                        <Label Grid.Row="5" Grid.Column="0" HorizontalOptions="Center" TextColor="Black" Text="On/Off: " FontFamily="Mulish" FontSize="Medium" />
+                        <Switch Grid.Row="5" Grid.Column="0"  x:Name="_switch" Toggled="OnSwitchToggled"   HorizontalOptions="Center" />
+                        <Button Grid.Row="7" Text="Accept" TextColor="Black" FontFamily="CabinSketch" HorizontalOptions="Center"/>
                     </Grid>
                 </yummy:PancakeView>
             </Grid>
