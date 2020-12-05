@@ -34,7 +34,7 @@
                             <RowDefinition Height="60"/>
                         </Grid.RowDefinitions>
                         <Label Grid.Row="0" Text="Start" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
-                        <TimePicker  Grid.Row="1" HorizontalOptions="Center" ></TimePicker>
+                        <TimePicker  Grid.Row="1" x:Name="_timePicker" HorizontalOptions="Center" ></TimePicker>
                         <Label Grid.Row="2" Text="End" TextColor="Black" FontSize="Medium" FontFamily="Mulish" HorizontalOptions="Center" />
                         <TimePicker  Grid.Row="3"  HorizontalOptions="Center" ></TimePicker>
                         <Expander Grid.Row="4"  HorizontalOptions="Center">
@@ -66,7 +66,7 @@
                             <Label Text="Default"  />
                         </Expander>
                         <Label Grid.Row="7"  HorizontalOptions="Center" TextColor="Black" Text="Vibration:" FontFamily="Mulish" FontSize="Medium" />
-                        <Switch Grid.Row="8"   HorizontalOptions="Center" />
+                        <Switch Grid.Row="8" x:Name="_switch" Toggled="OnSwitchToggled"   HorizontalOptions="Center" />
                         <Button Grid.Row="9" Text="Accept" TextColor="Black" FontFamily="CabinSketch" HorizontalOptions="Center"/>
                     </Grid>
                 </yummy:PancakeView>
