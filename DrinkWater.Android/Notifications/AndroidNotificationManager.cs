@@ -39,8 +39,6 @@ namespace DrinkWater.Droid.Notifications
                 CreateNotificationChannel();
             }
 
-            messageId++;
-
             Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
             intent.PutExtra(TitleKey, title);
             intent.PutExtra(MessageKey, message);
@@ -48,6 +46,7 @@ namespace DrinkWater.Droid.Notifications
             PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId, intent, PendingIntentFlags.OneShot);
 
             NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
+                .SetAutoCancel(true)
                 .SetContentIntent(pendingIntent)
                 .SetContentTitle(title)
                 .SetContentText(message)

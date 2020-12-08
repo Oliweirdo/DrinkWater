@@ -17,6 +17,7 @@ namespace DrinkWater.Views
         readonly INotificationManager notificationManager;
         DateTime _triggerTime;
         DateTime _triggerTimeEnd;
+        int _repeatTime;
         public SetPage()
         {
             InitializeComponent();
@@ -35,18 +36,12 @@ namespace DrinkWater.Views
             if (_switch.IsToggled && DateTime.Now >= _triggerTime)
                 {
                 _switch.IsToggled = false;
-                DisplayAlert("Alert", "Time to drink water :)", "OK");
                 string title = $"Drink Water";
                 string message = $"Time to drink water :)";
                 notificationManager.ScheduleNotification(title, message);
 
                 var duration = TimeSpan.FromSeconds(1);
                 Vibration.Vibrate(duration);
-                    if(_switch.IsToggled && DateTime.Now >= _triggerTimeEnd) 
-                return false;
-            
-                if (_triggerTimeEnd > _triggerTime)
-                    return false;
             }
             return true;
         }
@@ -71,7 +66,7 @@ namespace DrinkWater.Views
                 _triggerTime = DateTime.Today + _timePicker.Time;
                 if (_triggerTime < DateTime.Now)
                 {
-                    _triggerTime += TimeSpan.FromDays(1);
+                    _triggerTime += TimeSpan.FromMinutes(_repeatTime);
                 }
             }
         }
@@ -97,35 +92,35 @@ namespace DrinkWater.Views
 
         private void half_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 30;
         }
         private void one_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 60;
         }
         private void onehalf_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 90;
         }
         private void two_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 120;
         }
         private void twohalf_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 150;
         }
         private void three_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 180;
         }
         private void threehalf_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 210;
         }
         private void four_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-
+            _repeatTime = 240;
         }
     }
 }
