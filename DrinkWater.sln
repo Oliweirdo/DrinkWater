@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkWater.Android", "DrinkWater.Android\DrinkWater.Android.csproj", "{17135468-BF11-42B5-ABBC-7B50FAF4AD76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrinkWater", "DrinkWater\DrinkWater.csproj", "{3AC11543-D3F7-40B4-8590-23373B699407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrinkWater", "DrinkWater\DrinkWater.csproj", "{3AC11543-D3F7-40B4-8590-23373B699407}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
