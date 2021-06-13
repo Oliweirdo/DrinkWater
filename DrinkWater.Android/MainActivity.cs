@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.OS;
 using Xamarin.Forms;
 using Android.Content;
+using Plugin.FirebasePushNotification;
 
 namespace DrinkWater.Droid
 {
@@ -28,6 +29,7 @@ namespace DrinkWater.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
 
+            FirebasePushNotificationManager.ProcessIntent(this, Intent);
         }
 
     

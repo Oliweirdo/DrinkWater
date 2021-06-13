@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589993433021",
+    "project_id": "dwpushnotify",
+    "storage_bucket": "dwpushnotify.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589993433021:android:57b5744d842633c537e4d4",
+        "android_client_info": {
+          "package_name": "com.weirdocode.drinkwater"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589993433021-o0ul42g9iuaqf0cs0qg118u0nldcheml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsyhyOx6obFfvccnt7zEDsGsGPq3UalDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589993433021-o0ul42g9iuaqf0cs0qg118u0nldcheml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
